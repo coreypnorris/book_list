@@ -37,6 +37,6 @@ class BooksController < ApplicationController
 private
 
   def book_params
-    params.fetch(:book).permit(:name, :email, :phone)
+    params.fetch(:book).permit(:name, :author, :review, :rating, :amazon_id, :url, :image)
   end
 end
