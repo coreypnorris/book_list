@@ -1,3 +1,3 @@
-class ContactSerializer < ActiveModel::Serializer
+class BookSerializer < ActiveModel::Serializer
   attributes :id, :name, :author
 end
