@@ -10,7 +10,7 @@ class BooksController < ApplicationController
     if @book.save
       render :json => @book, :status => 201
     else
-      render :json => @book.errors, :status => 422
+      render :json => { :errors => @book.errors }, :status => 422
     end
   end
 
@@ -24,7 +24,7 @@ class BooksController < ApplicationController
     if @book.update(book_params)
       head :no_content
     else
-      render :json => @book.errors, :status => 422
+      render :json => { :errors => @book.errors }, :status => 422
     end
   end
 
@@ -37,6 +37,6 @@ class BooksController < ApplicationController
 private
 
   def book_params
-    params.fetch(:book).permit(:name, :author)
+    params.fetch(:book).permit(:name, :email, :phone)
   end
 end
