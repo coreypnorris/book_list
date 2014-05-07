@@ -5,5 +5,6 @@ App.Book = DS.Model.extend({
   rating: DS.attr(),
   amazon_id: DS.attr(),
   url: DS.attr(),
-  image: DS.attr()
+  image: DS.attr(),
+  genre: DS.belongsTo('genre')
 });
