@@ -1,4 +1,4 @@
 App.Genre = DS.Model.extend({
   name: DS.attr(),
-  books: DS.hasMany('book')
+  books: DS.hasMany('book', { async: true })
 });
