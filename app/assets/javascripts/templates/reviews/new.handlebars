@@ -1,0 +1,63 @@
+<ol class='breadcrumb'>
+  <li>{{#link-to 'index'}}Books{{/link-to}}</li>
+  <li class='active'>New</li>
+</ol>
+
+<div class='row'>
+  <form class='form-horizontal' role='form'>
+    <div class='form-group'>
+      <label for='book_name' class='col-sm-2 control-label'>Book Title</label>
+      <div class='col-sm-9'>
+        {{input class='form-control' id='book_name' placeholder='Book Title' valueBinding='model.name'}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="book_author" class="col-sm-2 control-label">Author</label>
+      <div class="col-sm-9">
+        {{input class="form-control" id="book_author" placeholder="Author" valueBinding="model.author"}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="book_review" class="col-sm-2 control-label">Review</label>
+      <div class="col-sm-9">
+        {{textarea class="form-control" id="book_review" valueBinding="model.review"}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="book_url" class="col-sm-2 control-label">Amazon Link URL</label>
+      <div class="col-sm-9">
+        {{input class="form-control" id="book_url" placeholder="Amazon Link URL" valueBinding="model.url"}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="book_image" class="col-sm-2 control-label">Image URL</label>
+      <div class="col-sm-9">
+        {{input class="form-control" id="book_image" placeholder="Image URL" valueBinding="model.image"}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="book_rating" class="col-sm-2 control-label">Rating</label>
+      <div class="col-sm-9">
+        {{view Ember.Select content=ratings class="form-control" id="book_rating" valueBinding="model.rating"}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="book_genre" class="col-sm-2 control-label">Genre</label>
+      <div class="col-sm-9">
+        {{view Ember.Select content=genres optionLabelPath="content.name" class="form-control" id="book_genre" valueBinding="model.genre"}}
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type='submit' class='btn btn-default' {{action 'createReview'}}>Save Review</button>
+      <div>
+    </div>
+  </form>
+</div>
