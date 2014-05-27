@@ -14,6 +14,7 @@ App.ReviewsNewRoute = Ember.Route.extend({
       if(this.currentModel.book.get('isNew')) {
         if(confirm("Are you sure you want to abandon progress?")) {
           this.currentModel.book.destroyRecord();
+          this.currentModel.book.save();
         } else {
           transition.abort();
         }
