@@ -4,4 +4,4 @@
 
 It's an app for displaying book reviews. Allows for sorting books by genre, links to each book's Amazon page, and display of each book's cover art.
 
-You can visit a live version of the site at http://mysterious-hollows-2879.herokuapp.com/
+You can visit a live version of the site at http://book-reviews.herokuapp.com/
